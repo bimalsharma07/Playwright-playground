@@ -6,5 +6,13 @@ test('login flow', async ({page}) => {
 
   await page.locator('#login2').click();
 
+  await page.locator('#loginusername').fill('pavanol');
+  await page.locator('#loginpassword').fill('test@123');
+  await page.getByRole('button', { name:  /Log in/}).click();
+
+  await page.waitForTimeout(4000);
+
+
+
   await page.waitForTimeout(4000);
 })
