@@ -10,9 +10,11 @@ test('login flow', async ({page}) => {
   await page.locator('#loginpassword').fill('test@123');
   await page.getByRole('button', { name:  /Log in/}).click();
 
-  await page.waitForTimeout(4000);
-
-
+  await expect(page.getByText('Welcome pavanol')).toBeVisible();
 
   await page.waitForTimeout(4000);
+
+
+
+
 })
