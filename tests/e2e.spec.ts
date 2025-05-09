@@ -16,6 +16,15 @@ test('login flow', async ({page}) => {
 
   await page.getByRole('button', { name:  /Place Order/}).click();
 
+  await page.locator('#name').fill('Tester');
+  await page.locator('#country').fill('country');
+  await page.locator('#city').fill('city');
+  await page.locator('#card').fill('1234567890123456');
+  await page.locator('#month').fill('12');
+  await page.locator('#year').fill('2025');
+  await page.getByRole('button', { name:  /Purchase/}).click();
+  await expect(page.getByText('Thank you for your purchase!')).toBeVisible();
+
 
   await page.waitForTimeout(4000);
 
