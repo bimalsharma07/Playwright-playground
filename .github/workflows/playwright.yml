@@ -1,10 +1,11 @@
-name: Playwright Tests
+name: Playwright Tests & Allure Report Deployment
 
 on:
   push:
     branches: [ main ]
+
 jobs:
-  test:
+  test-and-deploy:
     timeout-minutes: 60
     runs-on: ubuntu-latest
 
@@ -34,10 +35,18 @@ jobs:
         path: playwright-report/
         retention-days: 30
 
-    - name: Upload Allure Report
+    - name: Upload Allure Report Artifact
       if: ${{ !cancelled() }}
       uses: actions/upload-artifact@v4
       with:
         name: allure-report
         path: allure-report/
         retention-days: 30
+
+    - name: Deploy Allure Report to GitHub Pages
+      if: ${{ github.ref == 'refs/heads/main' && !cancelled() }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./allure-report
+        publish_branch: gh-pages
