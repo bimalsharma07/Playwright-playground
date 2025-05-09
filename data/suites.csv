@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 09 15:31:42 UTC 2025","Fri May 09 15:31:50 UTC 2025","7352","firefox","e2e.spec.ts","","","","login flow",""
+"passed","Fri May 09 15:31:51 UTC 2025","Fri May 09 15:32:01 UTC 2025","9575","webkit","e2e.spec.ts","","","","login flow",""
+"passed","Fri May 09 15:31:35 UTC 2025","Fri May 09 15:31:41 UTC 2025","6180","chromium","e2e.spec.ts","","","","login flow",""
