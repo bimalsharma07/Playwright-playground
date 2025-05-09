@@ -12,6 +12,11 @@ test('login flow', async ({page}) => {
 
   await expect(page.getByText('Welcome pavanol')).toBeVisible();
 
+  await page.locator('#cartur').click();
+
+  await page.getByRole('button', { name:  /Place Order/}).click();
+
+
   await page.waitForTimeout(4000);
 
 
