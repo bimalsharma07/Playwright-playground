@@ -1,6 +1,7 @@
 This repository showcases a complete end-to-end (E2E) automation framework for a demo website using Playwright. It covers the entire workflow, from adding items to the cart to purchasing them, ensuring a seamless user journey through automation.
 
 Features
+
 ✅ End-to-End Web Automation
 
 Simulates real user interactions, from browsing products to completing purchases.
