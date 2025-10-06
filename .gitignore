@@ -2,9 +2,7 @@
 # Playwright
 node_modules/
 /test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/allure-output/
-/allure-report/
-/allure-results/
+html-report/
+admin.json
+user.json
+.env
